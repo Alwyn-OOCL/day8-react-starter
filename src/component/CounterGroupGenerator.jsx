@@ -4,17 +4,17 @@ const CounterGroupGenerator = (props) => {
     const [size, setSize] = useState(0);
 
     const handleSizeChange = (event) => {
-        const size = event.target.value
-        if (size >= 0 && size <= 20) {
-            setSize(size);
-            props.onCounterSizeChange(size);
+        const changedSize = event.target.value;
+        if (changedSize >= 0 && changedSize <= 20) {
+            setSize(changedSize);
+            props.onCounterSizeChange(changedSize);
         }
     };
 
     const handleReset = () => {
         setSize(0);
+        props.onCounterSizeChange(0);
     };
-
 
     return (
         <div className="input-container">
@@ -28,7 +28,7 @@ const CounterGroupGenerator = (props) => {
             />
             <button onClick={handleReset}>Reset</button>
         </div>
-)
+    )
 }
 
 export default CounterGroupGenerator;
