@@ -6,15 +6,13 @@ import CounterGroupSum from "./CounterGroupSum";
 
 const MultipleCounter = () => {
     const [counterSize, setCounterSize] = useState(0);
-    const [totalCounts, setTotalCounts] = useState([]);
+    const [totalCounts, setTotalCounts] = useState(0);
 
     const handleCounterSizeChange = (size) => {
-        console.log(size);
         setCounterSize(size);
     }
 
     const handleCounterValuesChange = (newValues) => {
-        console.log(newValues);
         setTotalCounts(newValues);
     };
 
