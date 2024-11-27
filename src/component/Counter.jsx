@@ -11,7 +11,7 @@ const Counter = () => {
     }
     return (
         <div>
-            <div className="counter-wrapper">
+            <div>
                 <button className='button' onClick={decrement}>-</button>
                 <span>{number}</span>
                 <button className='button' onClick={increment}>+</button>

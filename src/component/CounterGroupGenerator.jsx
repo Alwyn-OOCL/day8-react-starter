@@ -1,13 +1,13 @@
-import Counter from "./Counter";
 import {useState} from "react";
 
-const CounterGroupGenerator = () => {
+const CounterGroupGenerator = (props) => {
     const [size, setSize] = useState(0);
 
     const handleSizeChange = (event) => {
-        console.log("enter handleSizeChange")
-        if (event.target.value >= 0 && event.target.value <= 20) {
-            setSize(event.target.value);
+        const size = event.target.value
+        if (size >= 0 && size <= 20) {
+            setSize(size);
+            props.onCounterSizeChange(size);
         }
     };
 
