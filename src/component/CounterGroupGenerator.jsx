@@ -27,7 +27,6 @@ const CounterGroupGenerator = () => {
                 onChange={handleSizeChange}
             />
             <button onClick={handleReset}>Reset</button>
-            <Counter/>
         </div>
 )
 }

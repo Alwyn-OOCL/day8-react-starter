@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from "./component/Counter";
-import CounterGroupGenerator from "./component/CounterGroupGenerator";
+import MultipleCounter from "./component/MultipleCounter";
 
 function App() {
   return (
-    <CounterGroupGenerator/>
+    <MultipleCounter/>
   );
 }
 
