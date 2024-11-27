@@ -8,11 +8,11 @@ const CounterGroup = (props) => {
     const [countersValue, setCountersValue] = useState(Array(size).fill(0));
 
     const handleValueChange = (index, newValue) => {
-        const updatedCounters = [...counters];
+        const updatedCounters = [...countersValue];
         updatedCounters[index] = newValue;
         setCountersValue(updatedCounters);
         // 计算所有计数器的总和
-        const total = countersValue.reduce((sum, count) => sum + count);
+        const total = updatedCounters.reduce((sum, count) => sum + count, 0);
         props.onValueChange(total);
     };
 
