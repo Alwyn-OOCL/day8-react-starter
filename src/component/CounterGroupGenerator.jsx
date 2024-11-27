@@ -20,6 +20,7 @@ const CounterGroupGenerator = (props) => {
         <div className="input-container">
             <font>Size:</font>
             <input
+                style={{margin: "10px"}}
                 min={0}
                 max={20}
                 type="number"

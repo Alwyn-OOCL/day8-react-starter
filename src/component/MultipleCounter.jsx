@@ -1,6 +1,7 @@
 import CounterGroupGenerator from "./CounterGroupGenerator";
 import CounterGroup from "./CounterGroup";
 import React, {useState} from "react";
+import "./MultipleCounter.css";
 
 const MultipleCounter = () => {
     const[counterSize, setCounterSize] = useState(0);
@@ -10,8 +11,11 @@ const MultipleCounter = () => {
         setCounterSize(size);
     }
     return (
-        <div>
-            <CounterGroupGenerator onCounterSizeChange={handleCounterSizeChange}/>
+        <div className={"multiple-counter-wrapper"}>
+            <CounterGroupGenerator
+                onCounterSizeChange={handleCounterSizeChange}
+                counterSize={counterSize}
+            />
             <CounterGroup size={counterSize}
             />
         </div>

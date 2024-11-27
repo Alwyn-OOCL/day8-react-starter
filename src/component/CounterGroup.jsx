@@ -9,7 +9,7 @@ const CounterGroup = (props) => {
 
     for (let i = 0; i < size; i++) {
         counters.push(
-            <Counter key={i + Math.random()}/>
+            <Counter key={i}/>
         );
     }
     return (
